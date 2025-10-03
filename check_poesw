@@ -62,8 +62,8 @@ try:
   for row in rows:
     values = [col.text for col in row]
     perfdata += "%s=%s " % (values[0].replace(" ", ""), values[4].replace("-", "0"))
-  print("POESW OK: Current consumption %sW %s" % (consumption, perfdata))
+  print("POESW_PWR OK: Current consumption %sW %s" % (consumption, perfdata))
   exit(0)
 except Exception as e:
-  print("POESW CRITICAL: %s" % e)
+  print("POESW_PWR CRITICAL: %s" % e)
   exit(2)
